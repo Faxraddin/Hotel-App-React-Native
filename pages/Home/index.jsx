@@ -1,17 +1,24 @@
-import React from "react";
-import { View } from "react-native";
-
 import Home from "./Home";
 import About from "./About";
 import Rooms from "./Rooms";
+import SeeDo from "./SeeDo";
 
-export default function Unit() {
+import Navbar from '../../layouts/Navbar'
+import Footer from '../../layouts/Footer'
 
-  return (
-    <View>
-        <Home />
-        <About />
-        <Rooms/>
-    </View>
-  );
+import { ScrollView } from "react-native";
+
+export default function Unit(){
+  return(
+    <ScrollView>
+      <Navbar/>
+
+      <Home/>
+      <About/>
+      <Rooms/>
+      <SeeDo/>
+
+      <Footer/>
+    </ScrollView>
+  )
 }
