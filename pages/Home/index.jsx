@@ -4,6 +4,7 @@ import Rooms from "./Rooms";
 import SeeDo from "./SeeDo";
 import Photos from "./Photos";
 import Services from "./Services";
+import Reviews from "./Reviews";
 
 import Navbar from '../../layouts/Navbar'
 import Footer from '../../layouts/Footer'
@@ -21,6 +22,7 @@ export default function Unit(){
       <SeeDo/>
       <Photos/>
       <Services/>
+      <Reviews/>
 
       <Footer/>
     </ScrollView>

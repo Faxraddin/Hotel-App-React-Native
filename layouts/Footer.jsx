@@ -14,7 +14,7 @@ export default function Footer() {
                     longitudeDelta: 0.01,
                     }}
                 />
-                <Image style={{width:'100%',height:300}} source={require('../public/map.png')}/>
+                <Image style={{width:'100%',height:380}} source={require('../public/map.png')}/>
             </View>
         </View>
     )
