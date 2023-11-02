@@ -46,7 +46,7 @@ export default function SeeDo(){
         <View style={{width:'100%',justifyContent:'center',alignItems:'center',paddingBottom:70}}>
             <View style={{width:'90%',paddingTop:60,alignItems:'center'}}>
 
-                <Text style={{fontSize:23}}>See & Do</Text>
+                <Text style={{fontSize:23}}>Services</Text>
                 {data.map(i => <SeeDOBox img={i.img} text={i.text} name={i.name}/>)}
 
             </View>
