@@ -3,7 +3,7 @@ import { View,Text } from "react-native";
 export default function About() {
     return(
         <View style={{width:'100%',justifyContent:'center',alignItems:'center',paddingBottom:70}}>
-            <View style={{width:'90%',paddingTop:60,alignItems:'center'}}>
+            <View style={{width:'80%',paddingTop:60,alignItems:'center'}}>
                 <Text style={{fontSize:23}}>About</Text>
 
                 <Text style={{fontSize:16.5,paddingTop:30,textAlign:'center'}}>Welcome to Hope Lake Hotel & Restaurant – Where Nature and Culinary Art Converge!</Text>
