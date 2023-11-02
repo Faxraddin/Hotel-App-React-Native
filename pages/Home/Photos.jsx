@@ -26,10 +26,10 @@ export default function Photos(){
         <View style={{justifyContent:'center',alignItems:'center',width:'100%'}}>
             <View style={{justifyContent:'center',alignItems:'center',width:'80%',gap:20}}>
                 <View style={{flex:1,}}>
-                    <SliderBox parentWidth={350} sliderBoxHeight={480} images={imagesFood}/>
+                    <SliderBox autoplay={true} parentWidth={350} sliderBoxHeight={480} images={imagesFood}/>
                 </View>
                 <View style={{flex:1,}}>
-                    <SliderBox parentWidth={350} sliderBoxHeight={480} images={imagesAnimals}/>
+                    <SliderBox autoplay={true} parentWidth={350} sliderBoxHeight={480} images={imagesAnimals}/>
                 </View>
             </View>
         </View>
