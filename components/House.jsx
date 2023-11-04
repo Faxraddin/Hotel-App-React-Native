@@ -1,6 +1,9 @@
 import { View,Text,Image,TouchableOpacity } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HouseBox(props){
+    
+
     return(
         <View style={{width:315,justifyContent:'center',alignItems:'center'}}>
             <View style={{width:'100%',justifyContent:'center',alignItems:'center',gap:20}}>
@@ -21,6 +24,8 @@ export default function HouseBox(props){
                             </View>
                         </TouchableOpacity>
                     </View>
+                    
+                    
                 </View>
 
             </View>

@@ -39,7 +39,7 @@ export default function Services () {
             <View style={{width:'90%',paddingTop:60,alignItems:'center'}}>
 
                 <Text style={{fontSize:23}}>Services</Text>
-                {data.map(i => <ServicesOBox  text={i.text} name={i.name}/>)}
+                {data.map(i => <ServicesOBox key={i.text} text={i.text} name={i.name}/>)}
 
             </View>
         </View>
