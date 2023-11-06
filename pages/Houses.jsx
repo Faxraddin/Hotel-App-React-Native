@@ -1,4 +1,4 @@
-import { View,Text,ImageBackground,ScrollView } from "react-native";
+import { View,Text,ImageBackground,ScrollView,Button } from "react-native";
 
 import HouseBox from "../components/House";
 

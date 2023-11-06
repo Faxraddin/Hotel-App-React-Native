@@ -14,7 +14,7 @@ export default function Reviews(){
         <ImageBackground blurRadius={44} source={require('../../public/hpls.png')} resizeMode="strech">
         <View style={{paddingBottom:70,paddingTop:70}}> 
             <View style={{justifyContent:'center',alignItems:'center',gap:50}}>
-                {data.map(room => <ReviewBox key={room.house} text={room.text} header={room.header}/>)}
+                {data.map(room => <ReviewBox key={room} text={room.text} header={room.header}/>)}
             </View>
         </View>
         </ImageBackground>

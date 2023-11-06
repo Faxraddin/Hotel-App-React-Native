@@ -1,8 +1,21 @@
 import { View,Text,Image,TouchableOpacity } from "react-native";
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import { connect } from "react-redux";
+import { useSelector } from "react-redux";
+import setHouse from "../redux/setHouse";
+import { useDispatch } from "react-redux";
 
 export default function HouseBox(props){
+    const dispatch = useDispatch()
     
+    const handleClick = () => {
+        dispatch(
+            setHouse(props.houseNumber),
+            type='house'
+        );
+    };
+    const data = useSelector(state=>state.house)
+    console.log(data)
 
     return(
         <View style={{width:315,justifyContent:'center',alignItems:'center'}}>
@@ -18,17 +31,16 @@ export default function HouseBox(props){
                         <Text style={{fontWeight:300,fontSize:18}}>{props.price}</Text>
                     </View>
                     <View style={{borderRadius:20,marginTop:20,position:'relative',top:-30}}>
-                        <TouchableOpacity style={{alignItems:'center',justifyContent:'center',borderRadius:20}}>
+                        <TouchableOpacity onPress={handleClick} style={{alignItems:'center',justifyContent:'center',borderRadius:20}}>
                             <View style={{width:'96%',borderRadius:15}}>
                                 <Text style={{backgroundColor:'black',color:'white',width:'100%',textAlign:'center',borderRadius:20,padding:10,fontWeight:300,fontSize:18}}>More Info</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
-                    
-                    
                 </View>
 
             </View>
         </View>
     )
 }
+
