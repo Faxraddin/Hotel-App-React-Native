@@ -1,8 +1,7 @@
 import { View,Text,Image,ImageBackground,Button,Linking,TouchableOpacity } from "react-native";
-
 import * as OpenPdf from 'react-native-openanything';
 
-export default function Navbar () {
+export default function Navbar ({navigation}) {
 
     const instagramHandler = () => {
         const instagramUrl = 'https://www.instagram.com/hopelake_/';
@@ -16,7 +15,11 @@ export default function Navbar () {
 
     const menuHandler = () => {
         OpenPdf.Pdf('https://hopelake.netlify.app/menu.pdf')
-      };
+    };
+
+    const redirect = () => {
+        navigate('Login')
+    }
 
     return (
         <ImageBackground blurRadius={2} resizeMode="cover" style={{width:'100%',alignItems:'center',justifyContent:'center'}} source={require('../public/fornav.png')}>
@@ -35,13 +38,14 @@ export default function Navbar () {
                     </TouchableOpacity>
                 </View>
                 <View style={{flexDirection:'row',gap:15}}>
-                    <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>Home</Text>
+                    <TouchableOpacity onPress><Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>Home</Text></TouchableOpacity>
                     <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>About</Text>
                     <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>Services</Text>
                     <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>See & Do</Text>
 
                 </View>
                 
+                <Button onPress={()=> navigation.navigate('Login')} color={'rgb(27, 51, 51)'} title='Log In'/>
             </View>
         </View>
         </ImageBackground>

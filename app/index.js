@@ -1,44 +1,29 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import { SafeAreaView } from "react-native";
-import { Stack,useRouter } from "expo-router";
+import { Stack } from "expo-router";
 
 import { Provider } from "react-redux";
 import persistStore from "redux-persist/es/persistStore";
 import { PersistGate } from "redux-persist/integration/react";
 
-import { Ionicons } from '@expo/vector-icons'; 
-import { MaterialIcons } from '@expo/vector-icons'; 
-
 import Unit from "../pages/Home";
-import Houses from "../pages/Houses";
+import Login from "../pages/Login";
+
 import { store } from "../redux/store";
 
-const Tab = createBottomTabNavigator();
+const HomeStack = createNativeStackNavigator(); 
+
 const persistor = persistStore(store)
 
-function Tabs() {
-  const router = useRouter()
-  return (
-    <Tab.Navigator  screenOptions={
-        ({ route,navigation }) => ({
-            tabBarIcon: ({ color,focused,size}) =>{
-                let iconName;
-                if(route.name==='Home'){
-                  focused ? iconName='home' : iconName='home-outline';
-                  return <Ionicons name={iconName} size={size} color={color}/>
-                } else if (route.name==='Houses'){
-                  return <MaterialIcons name="hotel" size={size} color={color}/>
-                }
-            },
-            headerShown: false,
-            headerTitle:''
-        })
-    }>
-      <Tab.Screen name="Home" component={Unit} />
-      <Tab.Screen name="Houses" component={Houses} />
-    </Tab.Navigator>
-  );
+function StackTab() {
+  return(
+    <HomeStack.Navigator initialRouteName="Home">
+      <HomeStack.Screen options={{headerShown:false}} name="Home" component={Unit}/>
+      <HomeStack.Screen options={{headerShown:false}} name="Login" component={Login}/>
+    </HomeStack.Navigator>
+  )
 }
 
 export default function App() {
@@ -47,9 +32,9 @@ export default function App() {
       <PersistGate persistor={persistor}>
     
       <SafeAreaView style={{zIndex:4,height:'100%'}}>
-        <Stack.Screen options={{headerShown:false}}/>
+          <Stack.Screen options={{headerShown:false}}/>
           <NavigationContainer style={{zIndex:4,height:'100%'}} independent={true}>
-              <Tabs />
+              <StackTab/>
           </NavigationContainer>
       </SafeAreaView>
     

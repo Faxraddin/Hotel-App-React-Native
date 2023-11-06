@@ -5,26 +5,30 @@ import SeeDo from "./SeeDo";
 import Photos from "./Photos";
 import Services from "./Services";
 import Reviews from "./Reviews";
-
-import Navbar from '../../layouts/Navbar'
+import Navbar from "../../layouts/Navbar";
 import Footer from '../../layouts/Footer'
 
-import { ScrollView } from "react-native";
+import TabBottom from "../../components/Tabs";
+import { ScrollView, View } from "react-native";
 
-export default function Unit(){
+export default function Unit({navigation}){
   return(
-    <ScrollView>
-      <Navbar/>
+    <View>
+      <ScrollView>
+        <Navbar navigation={navigation}/>
 
-      <Home/>
-      <About/>
-      <Rooms/>
-      <SeeDo/>
-      <Photos/>
-      <Services/>
-      <Reviews/>
+        <Home/>
+        <About/>
+        <Rooms/>
+        <SeeDo/>
+        <Photos/>
+        <Services/>
+        <Reviews/>
 
-      <Footer/>
-    </ScrollView>
+        <Footer/>
+      </ScrollView>
+      <TabBottom/>
+    </View>
+
   )
 }
