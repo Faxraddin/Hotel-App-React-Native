@@ -27,7 +27,6 @@ export default function Unit({navigation}){
 
         <Footer/>
       </ScrollView>
-      <TabBottom/>
     </View>
 
   )

@@ -9,10 +9,7 @@ export default function HouseBox(props){
     const dispatch = useDispatch()
     
     const handleClick = () => {
-        dispatch(
-            setHouse(props.houseNumber),
-            type='house'
-        );
+        dispatch(setHouse(props.houseNumber));
     };
     const data = useSelector(state=>state.house)
     console.log(data)

@@ -17,10 +17,6 @@ export default function Navbar ({navigation}) {
         OpenPdf.Pdf('https://hopelake.netlify.app/menu.pdf')
     };
 
-    const redirect = () => {
-        navigate('Login')
-    }
-
     return (
         <ImageBackground blurRadius={2} resizeMode="cover" style={{width:'100%',alignItems:'center',justifyContent:'center'}} source={require('../public/fornav.png')}>
         <View style={{justifyContent:'center',paddingTop:15,alignItems:'center',width:'100%',paddingBottom:30,paddingTop:30,elevation:5,shadowColor: 'rgba(0, 0, 0, 0.2)', shadowOpacity: 1, shadowRadius: 2 }}>  
@@ -38,7 +34,7 @@ export default function Navbar ({navigation}) {
                     </TouchableOpacity>
                 </View>
                 <View style={{flexDirection:'row',gap:15}}>
-                    <TouchableOpacity onPress><Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>Home</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={()=> navigation.navigate('Home')}><Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>Home</Text></TouchableOpacity>
                     <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>About</Text>
                     <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>Services</Text>
                     <Text style={{fontSize:19,color:'rgb(27, 51, 51)'}}>See & Do</Text>

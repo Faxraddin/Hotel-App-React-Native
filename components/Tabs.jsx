@@ -1,13 +1,13 @@
 import Houses from '../pages/Houses';
 import Unit from '../pages/Home';
+import * as React from 'react';
+import StackTop from './Stacks';
 
 import { Ionicons } from '@expo/vector-icons'; 
 import { MaterialIcons } from '@expo/vector-icons'; 
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { SafeAreaView } from "react-native";
-import { Stack } from "expo-router";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,18 +29,16 @@ function Tabs() {
               headerTitle:''
           })
       }>
+        <Tab.Screen name="Home" component={StackTop} />
         <Tab.Screen name="Houses" component={Houses} />
       </Tab.Navigator>
     );
 }
-  
 
 export default function TabBottom() {
     return(
-        <SafeAreaView>
-            <NavigationContainer style={{zIndex:4,height:'100%'}} independent={true}>
-                <Tabs/>
-            </NavigationContainer>
-        </SafeAreaView>
+      <NavigationContainer style={{zIndex:4,height:'100%'}} independent={true}>
+        <Tabs/>
+      </NavigationContainer>
     )
 }
