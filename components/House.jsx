@@ -1,6 +1,5 @@
 import { View,Text,Image,TouchableOpacity } from "react-native";
 
-import { useSelector } from "react-redux";
 import { setHouse } from "../redux/setHouse";
 import { useDispatch } from "react-redux";
 
@@ -8,7 +7,19 @@ export default function HouseBox(props){
     const dispatch = useDispatch()
     
     const handleClick = () => {
-        dispatch(setHouse(props.houseNumber));
+        dispatch(
+          setHouse({
+            houseNumber: props.houseNumber,
+            price: props.price,
+            houseText: props.houseText,
+            img1: props.img1,
+            img2: props.img2,
+            img3: props.img3,
+            img4: props.img4,
+            img5: props.img5,
+            img6: props.img6,
+          })
+        );
     };
 
     return(
@@ -25,7 +36,7 @@ export default function HouseBox(props){
                         <Text style={{fontWeight:300,fontSize:18}}>{props.price}</Text>
                     </View>
                     <View style={{borderRadius:20,marginTop:20,position:'relative',top:-30}}>
-                        <TouchableOpacity onPress={handleClick} style={{alignItems:'center',justifyContent:'center',borderRadius:20}}>
+                        <TouchableOpacity onPress={()=>(navigation.navigate('Login'))} style={{alignItems:'center',justifyContent:'center',borderRadius:20}}>
                             <View style={{width:'96%',borderRadius:15}}>
                                 <Text style={{backgroundColor:'black',color:'white',width:'100%',textAlign:'center',borderRadius:20,padding:10,fontWeight:300,fontSize:18}}>More Info</Text>
                             </View>

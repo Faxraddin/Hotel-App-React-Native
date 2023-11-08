@@ -1,5 +1,4 @@
-import Houses from '../pages/Houses';
-import Unit from '../pages/Home';
+import HousesStack from './HousesStack';
 import * as React from 'react';
 import StackTop from './Stacks';
 
@@ -26,11 +25,11 @@ function Tabs() {
                   }
               },
               headerShown: false,
-              headerTitle:''
+              headerTitle:'',
           })
       }>
         <Tab.Screen name="Home" component={StackTop} />
-        <Tab.Screen name="Houses" component={Houses} />
+        <Tab.Screen name="Houses" component={HousesStack} />
       </Tab.Navigator>
     );
 }
