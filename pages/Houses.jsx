@@ -1,5 +1,5 @@
 import { View,Text,ImageBackground,ScrollView,Button } from "react-native";
-
+import React from "react";
 import HouseBox from "../components/House";
 
 export default function Houses(){

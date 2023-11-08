@@ -1,8 +1,7 @@
 import { View,Text,Image,TouchableOpacity } from "react-native";
 
-import { connect } from "react-redux";
 import { useSelector } from "react-redux";
-import setHouse from "../redux/setHouse";
+import { setHouse } from "../redux/setHouse";
 import { useDispatch } from "react-redux";
 
 export default function HouseBox(props){
@@ -11,8 +10,6 @@ export default function HouseBox(props){
     const handleClick = () => {
         dispatch(setHouse(props.houseNumber));
     };
-    const data = useSelector(state=>state.house)
-    console.log(data)
 
     return(
         <View style={{width:315,justifyContent:'center',alignItems:'center'}}>
@@ -40,4 +37,3 @@ export default function HouseBox(props){
         </View>
     )
 }
-

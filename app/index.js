@@ -8,8 +8,6 @@ import persistStore from "redux-persist/es/persistStore";
 import { PersistGate } from "redux-persist/integration/react";
 import { store } from "../redux/store";
 
-import BlurView from "@react-native-community/blur";
-
 const persistor = persistStore(store)
 
 export default function App() {

@@ -1,12 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import setHouse from './setHouse';
 
 const persistConfig = {
   key: 'root',
-  storage,
+  storage:AsyncStorage,
   version:1
 };
 
