@@ -15,15 +15,15 @@ const counterSlice = createSlice({
   },
   reducers: {
     setHouse: (state,action) => {
-      state.numberHouse = action.payload.houseNumber;
-      state.priceHouse = action.payload.price;
-      state.houseText = action.payload.houseText;        
+      state.houseNumber = action.payload.houseNumber;
+      state.price = action.payload.price;
+      state.houseText = action.payload;        
       state.img1 = action.payload.img1;
-      state.img2 = action.payload.img2;
-      state.img3 = action.payload.img3;
-      state.img4 = action.payload.img4;
-      state.img5 = action.payload.img5;
-      state.img6 = action.payload.img6;
+      state.img2 = action.payload;
+      state.img3 = action.payload;
+      state.img4 = action.payload;
+      state.img5 = action.payload;
+      state.img6 = action.payload;
     }
   },
 });

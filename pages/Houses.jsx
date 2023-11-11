@@ -31,6 +31,11 @@ export default function Houses ({ navigation }) {
                         price={home.price}
                         key={home.id}
                         img1={home.img1}
+                        img2={home.img2}
+                        img3={home.img3}
+                        img4={home.img4}
+                        img5={home.img5}
+                        img6={home.img6}
                         navigation={navigation}
                         />
                     )}

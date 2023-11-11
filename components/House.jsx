@@ -3,6 +3,8 @@ import { View,Text,Image,TouchableOpacity } from "react-native";
 import { setHouse } from "../redux/setHouse";
 import { useDispatch } from "react-redux";
 
+import { useSelector } from "react-redux";
+
 export default function HouseBox(props){
     const dispatch = useDispatch()
     
