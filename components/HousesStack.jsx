@@ -1,21 +1,30 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { SafeAreaView } from "react-native";
-import { Stack } from "expo-router";
 
 import Houses from "../pages/Houses";
+import HouseBox from "./House";
+import HouseDeails from "../pages/HouseDetails";
 
 const HomeStack = createNativeStackNavigator();
 
+function StackTab() {
+    return(
+        <HomeStack.Navigator initialRouteName="Houses">
+            <HomeStack.Screen options={{headerShown:false}} name='Houses' component={Houses}/>
+            <HomeStack.Screen options={{headerShown:false}} name='HouseBox' component={HouseBox}/>
+            <HomeStack.Screen options={{headerShown:false}} name='HouseDetails' component={HouseDeails}/>
+        </HomeStack.Navigator>
+    )
+}
+
 export default function HousesStack(){
-    <SafeAreaView>
-        <Stack.Screen options={{headerShown:false}}/>
-        <NavigationContainer style={{zIndex:4,height:'100%'}} independent={true}>
-
-            <HomeStack.Navigator initialRouteName="Houses">
-                <HousesStack.Screen name='Houses' component={Houses}/>
-            </HomeStack.Navigator>
-
-        </NavigationContainer>
-    </SafeAreaView>
+    return(
+        <SafeAreaView style={{ flex: 1 }}>
+            <NavigationContainer style={{zIndex:4,height:'100%'}} independent={true}>
+                <StackTab/>
+            </NavigationContainer>
+        </SafeAreaView>
+    )
 }

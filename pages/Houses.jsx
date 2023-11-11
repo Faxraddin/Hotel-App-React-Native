@@ -2,7 +2,7 @@ import { View,Text,ImageBackground,ScrollView,Button } from "react-native";
 import React from "react";
 import HouseBox from "../components/House";
 
-export default function Houses ({navigation}) {
+export default function Houses ({ navigation }) {
     const data = [
         {id:1,houseNumber:1,houseText:'Charming village-style rental house with a bedroom, spacious living room...',beds:'king',price:100 ,img:require('../public/ev1.jpeg'),img1:require('../public/ev11.jpg'),img2:require('../public/ev12.jpg'),img3:require('../public/ev13.jpg'),img4:require('../public/ev14.jpg'),img5:require('../public/ev15.jpg')},
         {id:2,houseNumber:2,houseText:"Discover the enchanting allure of our two-story village-style rental house, where...",beds:'king',price:160 ,img:require('../public/house2.jpeg'),img1:require('../public/ev21.jpg'),img2:require('../public/ev22.jpg'),img3:require('../public/ev23.jpg'),img4:require('../public/ev24.jpg'),img5:require('../public/ev25.jpg')},

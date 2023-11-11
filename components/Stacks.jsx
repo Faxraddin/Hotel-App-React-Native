@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { SafeAreaView } from "react-native";
 import { Stack } from "expo-router";
