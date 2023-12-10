@@ -3,8 +3,6 @@ import { View,Text,Image,TouchableOpacity } from "react-native";
 import { setHouse } from "../redux/setHouse";
 import { useDispatch } from "react-redux";
 
-import { useSelector } from "react-redux";
-
 export default function HouseBox(props){
     const dispatch = useDispatch()
     
@@ -41,7 +39,7 @@ export default function HouseBox(props){
                     <View style={{borderRadius:20,marginTop:20,position:'relative',top:-30}}>
                         <TouchableOpacity onPress={handleClick} style={{alignItems:'center',justifyContent:'center',borderRadius:20}}>
                             <View style={{width:'96%',borderRadius:15}}>
-                                <Text style={{backgroundColor:'black',color:'white',width:'100%',textAlign:'center',borderRadius:20,padding:10,fontWeight:300,fontSize:18}}>More Info</Text>
+                                <Text style={{backgroundColor:'black',color:'white',width:'100%',textAlign:'center',borderRadius:10,padding:10,fontWeight:300,fontSize:18}}>More Info</Text>
                             </View>
                         </TouchableOpacity>
                     </View>

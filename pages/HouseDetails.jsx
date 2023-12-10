@@ -1,5 +1,6 @@
 import { View,Text,TouchableOpacity,Image,ScrollView } from "react-native";
 import { AntDesign } from '@expo/vector-icons'; 
+import React, { useState} from "react";
 
 import { useSelector } from "react-redux";
 
@@ -8,9 +9,15 @@ export default function HouseDetails({navigation}){
     const house = useSelector((state)=>state.house.houseNumber)
     const image = useSelector((state)=> state.house.img1)
 
+
+    const [calendar,setCalendar] = useState(false);
+    const handleClick = () => {
+        navigation.navigate('Calendar')
+    }
+
     return(
         <ScrollView>
-            <View style={{width:'100%',justifyContent:'center',alignItems:'center'}}>
+            <View style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:`${calendar ? 'gray':''}`,overflow:`${calendar?'hidden':''}`}}>
                 <View style={{width:'80%',gap:50}}>
                     
                     <View style={{justifyContent:'center',alignItems:'center',flexDirection:'row',marginTop:10}}>
@@ -30,8 +37,8 @@ export default function HouseDetails({navigation}){
                                 <Text style={{fontWeight:600,fontSize:20}}>Per Night</Text>
                             </View>
                             <TouchableOpacity>
-                                <View style={{borderRadius:10,backgroundColor:'black',width:300,justifyContent:'center',alignItems:'center',padding:10}}>
-                                    <Text style={{color:'white',fontSize:19}}>Book Now</Text>
+                                <View style={{borderRadius:10,backgroundColor:'black',width:260,justifyContent:'center',alignItems:'center',padding:10}}>
+                                    <Text onPress={handleClick} style={{color:'white',fontSize:19}}>Book Now</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -58,7 +65,6 @@ export default function HouseDetails({navigation}){
                             </View>
                         </View>
                     </View>
-
                 </View>
             </View>
         </ScrollView>

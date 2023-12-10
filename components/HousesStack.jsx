@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native";
 import Houses from "../pages/Houses";
 import HouseBox from "./House";
 import HouseDeails from "../pages/HouseDetails";
+import Calendar from "./Calendar";
 
 const HomeStack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ function StackTab() {
             <HomeStack.Screen options={{headerShown:false}} name='Houses' component={Houses}/>
             <HomeStack.Screen options={{headerShown:false}} name='HouseBox' component={HouseBox}/>
             <HomeStack.Screen options={{headerShown:false}} name='HouseDetails' component={HouseDeails}/>
+            <HomeStack.Screen options={{headerShown:false}} name='Calendar' component={Calendar}/>
         </HomeStack.Navigator>
     )
 }
