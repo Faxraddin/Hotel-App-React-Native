@@ -35,7 +35,6 @@ export default function Houses ({ navigation }) {
                         img3={home.img3}
                         img4={home.img4}
                         img5={home.img5}
-                        img6={home.img6}
                         navigation={navigation}
                         />
                     )}

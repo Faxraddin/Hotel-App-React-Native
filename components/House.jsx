@@ -37,9 +37,9 @@ export default function HouseBox(props){
                         <Text style={{fontWeight:300,fontSize:18}}>{props.price}</Text>
                     </View>
                     <View style={{borderRadius:20,marginTop:20,position:'relative',top:-30}}>
-                        <TouchableOpacity onPress={handleClick} style={{alignItems:'center',justifyContent:'center',borderRadius:20}}>
-                            <View style={{width:'96%',borderRadius:15}}>
-                                <Text style={{backgroundColor:'black',color:'white',width:'100%',textAlign:'center',borderRadius:10,padding:10,fontWeight:300,fontSize:18}}>More Info</Text>
+                        <TouchableOpacity onPress={handleClick} style={{alignItems:'center',justifyContent:'center',borderRadius:10,borderWidth:1,backgroundColor:'black'}}>
+                            <View style={{width:'90%',borderRadius:15}}>
+                                <Text style={{color:'white',width:'100%',textAlign:'center',borderRadius:8,padding:10,fontWeight:300,fontSize:18}}>More Info</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
