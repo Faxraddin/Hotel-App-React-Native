@@ -6,6 +6,7 @@ import { Stack } from "expo-router";
 
 import Unit from "../pages/Home";
 import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
 
 const HomeStack = createNativeStackNavigator(); 
 
@@ -14,6 +15,7 @@ function StackTab() {
       <HomeStack.Navigator initialRouteName="Tabs">
         <HomeStack.Screen options={{headerShown:false}} name="Home" component={Unit}/>
         <HomeStack.Screen options={{headerShown:false}} name="Login" component={Login}/>
+        <HomeStack.Screen options={{headerShown:false}} name="SignUp" component={SignUp}/>
       </HomeStack.Navigator>
     )
 }
